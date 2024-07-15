@@ -54,6 +54,7 @@ const Sidebar = () => {
   const pathname = usePathname();
   return (
     <div className="space-y-4 py-4 flex flex-col h-full">
+      {/* main side bar items */}
       <div className="px-3 py-2 flex-1">
         <Link href="/dashboard">
           <h1
@@ -100,6 +101,9 @@ const Sidebar = () => {
           </Link>
         </div>
       </div>
+
+      
+      {/* support and setting section */}
       <div className="px-3 py-2">
         <div className="space-y-1">
           <hr></hr>
