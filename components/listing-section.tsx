@@ -23,7 +23,8 @@ import {
   } from "lucide-react";
 
 const Listing = () => {
-    const [date, setDate] = React.useState<Date>(new Date());
+    const [dateRange, setDateRange] = React.useState<{ from: Date; to: Date}>({ from: new Date(), to: new Date("2024-07-20") });
+    
   return (
     <div className="grid auto-rows-max items-start gap-4 md:gap-8 lg:col-span-3 xl:col-span-2">
         <Card className="">
@@ -40,18 +41,18 @@ const Listing = () => {
                       variant={"outline"}
                       className={cn(
                         "w-[280px] justify-start text-left font-normal rounded-full border-[#1655FB]",
-                        !date && "text-muted-foreground"
+                        !dateRange && "text-muted-foreground"
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
-                      {date ? format(date, "PPP") : <span>Pick a date</span>}
+                      {dateRange ? `${format(dateRange.from, "PPP")} - ${format(dateRange.to, "PPP")}` : <span>Pick a date</span>}
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0">
                     <Calendar
-                      mode="single"
-                      selected={date}
-                      onSelect={setDate}
+                      mode="range"
+                      selected={dateRange}
+                      onSelect={setDateRange}
                       initialFocus
                     />
                   </PopoverContent>
