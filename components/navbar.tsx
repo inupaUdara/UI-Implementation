@@ -17,11 +17,11 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex w-full justify-end gap-3">
-        <div className="bg-white w-12 h-12 flex items-center justify-center rounded-2xl border-2 shadow-md">
+        <div className="bg-white w-12 h-12 flex items-center justify-center rounded-2xl border-2">
           <Bell size={19} />
         </div>
-        <div className="flex bg-white h-12  border-2 shadow-md rounded-2xl gap-2 items-center px-1 py-1">
-          <div className="bg-[#1655FB] w-10 h-10 flex items-center justify-center rounded-2xl border-2 shadow-sm p-2">
+        <div className="flex bg-white h-12  border-2 rounded-2xl gap-2 items-center px-1 py-1">
+          <div className="bg-[#1655FB] w-10 h-10 flex items-center justify-center rounded-2xl border-2 p-2">
             <UserRound size={18} color="white" />
           </div>
           <div className="flex flex-col">
